@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[4][3] = {
+        {56, 84, 91},
+        {32, 45, 64},
+        {11, 24, 97},
+        {33, 62, 77}
+    };
+
+    int sum = 0;
+
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("%d ", arr[i][j]);
+            sum = sum + arr[i][j];
+        }
+
+        printf("\n");
+    }
+
+    printf("Sum = %d\n", sum);
+
+    return 0;
+}
