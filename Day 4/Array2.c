@@ -1,24 +1,30 @@
 #include <stdio.h>
 
-const int size = 5;
-int main() {
+#define SIZE 3
 
-    int i,arr[size],max=0;
-    printf("Enter 5 integers:\n");
+int main()
+{
+    int arr[SIZE];
+    int i, max;
 
-    for (i = 0; i < size; i++) {
+    printf("Enter 3 numbers:\n");
+
+    for (i = 0; i < SIZE; i++)
+    {
         scanf("%d", &arr[i]);
     }
 
-    for (i = 0; i < size; i++) {
-        
-        if (arr[i] > max) {
-            max = arr[i];
-            arr[i] = max;
-        }
+    max = arr[0];
 
+    for (i = 1; i < SIZE; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
     }
 
-    printf("The maximum of the integers is: %d\n", max);
+    printf("Maximum number is %d", max);
 
+    return 0;
 }
